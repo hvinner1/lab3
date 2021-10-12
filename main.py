@@ -48,6 +48,6 @@ joy = Joystickclass(0x40)
 
 
 while True:
-    joy.read()
+    joy.get()
     print('{:>3}, {:>3}'.format(joy.xval, joy.yval))
     time.sleep(.1)
