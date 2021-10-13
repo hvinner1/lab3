@@ -28,8 +28,8 @@ class Joystickclass:
     self.PCF8591 = PCF8591(0x48)
     '''self.xval = 0x40
     self.yval = 0x41'''
-    self.xval = 0
-    self.yval = 0
+    #self.xval = 0
+    #self.yval = 0
 
   def get(self):  
     try:
