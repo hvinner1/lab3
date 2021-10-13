@@ -1,7 +1,3 @@
-'''x= red, ain1
-y=brown, ain2'''
-
-
 import smbus
 import time
 
@@ -29,7 +25,7 @@ class PCF8591:
 class Joystickclass:
 
   def __init__(self,address):
-    self.PCF8591 = PCF8591(address)
+    self.PCF8591 = PCF8591.bus(address)
     '''self.xval = 0x40
     self.yval = 0x41'''
     self.xval = 0
