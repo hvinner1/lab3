@@ -25,7 +25,7 @@ class PCF8591:
 class Joystickclass:
 
   def __init__(self,address):
-    self.PCF8591 = PCF8591(address)
+    self.PCF8591 = PCF8591(0x48)
     '''self.xval = 0x40
     self.yval = 0x41'''
     self.xval = 0
@@ -33,8 +33,8 @@ class Joystickclass:
 
   def get(self):  
     try:
-      self.xval= self.PCF8591.read(0x40)
-      self.yval= self.PCF8591.read(0x41)
+      self.xval= self.PCF8591.read(0)
+      self.yval= self.PCF8591.read(1)
     except Exception as e:
         print ("Error: %s \n" % e)
     #return self.bus.read_byte(self.address)
