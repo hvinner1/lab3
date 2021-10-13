@@ -37,7 +37,7 @@ class Joystickclass:
       self.yval= self.PCF8591.read(0x41)
     except Exception as e:
         print ("Error: %s \n" % e)
-    return self.bus.read_byte(self.address)
+    #return self.bus.read_byte(self.address)
 
 
 
